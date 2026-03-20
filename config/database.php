@@ -1,4 +1,6 @@
 <?php
+    //Para verificar conexion = http://127.0.0.1:8080/app-beta/config/database.php
+    
     //Local Database configuration
     $LOCAL_HOST     = 'localhost'; //127.0.0.1
     $LOCAL_DBNAME   = 'app_beta';
@@ -15,19 +17,19 @@
 
     //CREDENCIALES DE LA CONEXION
     $local_data_connection  = "
-        host = $LOCAL_HOST
-        dbname = $LOCAL_DBNAME
-        user = $LOCAL_USERNAME
+        host     = $LOCAL_HOST
+        dbname   = $LOCAL_DBNAME
+        user     = $LOCAL_USERNAME
         password = $LOCAL_PASSWORD
-        port = $LOCAL_PORT
+        port     = $LOCAL_PORT
     ";
 
     $supa_data_connection  = "
-        host = $SUPA_HOST
-        dbname = $SUPA_DBNAME
-        user = $SUPA_USERNAME
+        host     = $SUPA_HOST
+        dbname   = $SUPA_DBNAME
+        user     = $SUPA_USERNAME
         password = $SUPA_PASSWORD
-        port = $SUPA_PORT
+        port     = $SUPA_PORT
     ";
 
     //LOCAL CONNECTION
@@ -39,7 +41,7 @@
     }else{
         echo "Local Succes connection !!!";
     }
-
+/*
     //SUPA CONNECTION
     $supa_conn = pg_connect($supa_data_connection);
 
@@ -49,4 +51,5 @@
     }else{
         echo "<br>Supabase Succes connection !!!";
     }
+*/
 ?>
