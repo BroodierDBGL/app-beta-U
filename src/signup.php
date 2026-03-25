@@ -8,11 +8,12 @@
     $e_mail  = $_POST ['email'];
     $m_phone = $_POST ['mphone'];
     $p_sswd  = $_POST ['psswd'];
+    $enc_pass = md5($p_sswd);
 
     //Query to insert into SQL
     $sql = "INSERT INTO users (firstname, lastname, email, mobile_phone, psswd)
                
-               values('$f_name', '$l_name', '$e_mail','$m_phone','$p_sswd')";  //values('Pablo', 'Tomson', 'tom@mail.com','300777000','123')";
+               values('$f_name', '$l_name', '$e_mail','$m_phone','$enc_pass')";  //values('Pablo', 'Tomson', 'tom@mail.com','300777000','123')";
                
 
     //Execute query
@@ -23,7 +24,7 @@
 
     /*
     ###Endpoint
-    http://127.0.0.1:8080/app-beta/sources_(src)/signup.php → se inserta en la barra (aparece a plena vista) 
+    http://127.0.0.1:8080/app-beta/src/signup.php → se inserta en la barra (aparece a plena vista) 
     //                                                        de insert de postman y se despliega GET y
     //                                                        selecciona POST
     */

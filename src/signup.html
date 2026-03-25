@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register User</title>
+    <link rel="icon" type="image/png" href="icons/casa.png">
+</head>
+
+<body bgcolor="27F5A3">
+    
+    <center>
+    <table border="1">
+
+        <form name="frm-user" action="signup.php" method="POST">
+    <!-- metodo de envio con post-->
+        
+        <!-- <tr><td><label for="fname">Firstname</label><td><tr><br> -->
+        <label for="fname">Firstname</label><br>
+        <input type="text" name="fname" required><br>
+
+        <label for="lname">Lastname</label><br>
+        <input type="text" name="lname" required><br>
+
+        <label for="email">Email</label><br>
+        <input type="email" name="email" required><br>
+
+        <label for="psswd">Password</label><br>
+        <input type="password" name="psswd" required><br>
+
+        <label for="psswd2">Password again</label><br>
+        <input type="password" name="psswd2"><br>
+
+        <label for="mphone">Mobile phone</label><br>
+        <input type="number" name="mphone" required><br><br>
+
+        <tr><td><button type="submit">Register</button></td></tr>
+        </form>
+    </table>
+    </center>
+    
+</body>
+</html>
