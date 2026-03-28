@@ -5,7 +5,7 @@
     $LOCAL_HOST     = 'localhost'; //127.0.0.1
     $LOCAL_DBNAME   = 'app_beta';
     $LOCAL_USERNAME = 'postgres';
-    $LOCAL_PASSWORD = 'unicesmag';
+    $LOCAL_PASSWORD = 'Pinos0906*';
     $LOCAL_PORT     = '5432';
 
     //Supabase Database configuration
@@ -24,13 +24,7 @@
         port     = $LOCAL_PORT
     ";
 
-    $supa_data_connection  = "
-        host     = $SUPA_HOST
-        dbname   = $SUPA_DBNAME
-        user     = $SUPA_USERNAME
-        password = $SUPA_PASSWORD
-        port     = $SUPA_PORT
-    ";
+
 
     //LOCAL CONNECTION
     $local_conn = pg_connect($local_data_connection);
@@ -44,6 +38,15 @@
 
     //SUPA CONNECTION
     /*
+
+    $supa_data_connection  = "
+        host     = $SUPA_HOST
+        dbname   = $SUPA_DBNAME
+        user     = $SUPA_USERNAME
+        password = $SUPA_PASSWORD
+        port     = $SUPA_PORT
+    ";
+
     $supa_conn = pg_connect($supa_data_connection);
 
     if(!$supa_conn){

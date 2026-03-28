@@ -17,7 +17,13 @@
                
 
     //Execute query
-    pg_query($sql);
+    $enviar=pg_query($sql);
+
+    if(!$enviar){
+        echo "Error al conectar con la BD";
+    }else{
+        echo "Registrado Exitosamente!";
+    }
 
 
     //Para comprobar se usa postman
