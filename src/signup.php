@@ -17,9 +17,9 @@
                
 
     //Execute query
-    $enviar=pg_query($sql);
+    $result=pg_query($sql);
 
-    if(!$enviar){
+    if(!$result){
         echo "Error al conectar con la BD";
     }else{
         echo "Registrado Exitosamente!";

@@ -5,7 +5,7 @@
     $LOCAL_HOST     = 'localhost'; //127.0.0.1
     $LOCAL_DBNAME   = 'app_beta';
     $LOCAL_USERNAME = 'postgres';
-    $LOCAL_PASSWORD = 'Pinos0906*';
+    $LOCAL_PASSWORD = 'unicesmag';
     $LOCAL_PORT     = '5432';
 
     //Supabase Database configuration
