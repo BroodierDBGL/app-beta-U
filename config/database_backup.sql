@@ -29,3 +29,21 @@ CREATE TABLE users(
     updated_at   TIMESTAMP    DEFAULT CURRENT_TIMESTAMP,
     deleted_at   TIMESTAMP    DEFAULT NULL
 );
+
+--list_users.php
+alter table users
+	add column url_photo text;
+
+SELECT 
+    u.firstname || ' ' || u.lastname AS fullname,
+	u.email,
+	u.mobile_phone
+
+	CASE
+		WHEN u.status=true the 'Active' else 'Inactive' END as status,
+	u.profile_photo
+    FROM
+        users u
+FROM users;
+
+update users set url_photo='profile_photos/user_default.png';
