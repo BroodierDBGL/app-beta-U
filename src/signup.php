@@ -30,7 +30,7 @@
 
     /*
     ###Endpoint
-    http://127.0.0.1:8080/app-beta/src/signup.php → se inserta en la barra (aparece a plena vista) 
+    http://127.0.0.1:8080/app-beta-u/src/signup.php → se inserta en la barra (aparece a plena vista) 
     //                                                        de insert de postman y se despliega GET y
     //                                                        selecciona POST
     */
