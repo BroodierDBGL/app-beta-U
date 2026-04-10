@@ -37,8 +37,6 @@
     }
 
     //SUPA CONNECTION
-    /*
-
     $supa_data_connection  = "
         host     = $SUPA_HOST
         dbname   = $SUPA_DBNAME
@@ -55,5 +53,5 @@
     }else{
         echo "<br>Supabase Succes connection !!!";
     }
-*/
+
 ?>
