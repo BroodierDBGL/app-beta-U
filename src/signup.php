@@ -11,9 +11,9 @@
     $enc_pass = md5($p_sswd);
 
     //Query to insert into SQL
-    $sql = "INSERT INTO users (firstname, lastname, email, mobile_phone, psswd)
+    $sql = "INSERT INTO users (firstname, lastname, email, mobile_phone, psswd, url_photo)
                
-               values('$f_name', '$l_name', '$e_mail','$m_phone','$enc_pass')";  //values('Pablo', 'Tomson', 'tom@mail.com','300777000','123')";
+               values('$f_name', '$l_name', '$e_mail','$m_phone','$enc_pass','profile_photos\user_default_2.png')";  //values('Pablo', 'Tomson', 'tom@mail.com','300777000','123')";
                
 
     //Execute query
