@@ -15,6 +15,12 @@
 
     if (pg_num_rows($email_check) > 0) {
         echo "Error: El correo '$e_mail' ya esta registrado. Use un correo diferente.";
+    // FEATURE 2: Validar unicidad del celular
+    $phone_check = pg_query($local_conn, "SELECT id FROM users WHERE mobile_phone = '$m_phone'");
+    }
+
+    if (pg_num_rows($phone_check) > 0) {
+        echo "Error: El celular '$m_phone' ya esta registrado. Use un numero diferente.";
         exit();
     }
 
