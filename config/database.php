@@ -32,9 +32,9 @@
     if(!$local_conn){
         echo "Error: Unable to connect to local database";
         exit();
-    }else{
+    }/*else{
         echo "Local Succes connection !!!";
-    }
+    }*/
 
     //SUPA CONNECTION
     /*
