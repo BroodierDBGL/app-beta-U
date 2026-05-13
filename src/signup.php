@@ -22,7 +22,9 @@
     if(!$result){
         echo "Error al conectar con la BD";
     }else{
-        echo "Registrado Exitosamente!";
+        //echo "Registrado Exitosamente!";
+        echo "<script>alert('Listo. Usuario registrado')</script>";
+        header('refresh:0;url=signin.html');
     }
 
 
