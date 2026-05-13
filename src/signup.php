@@ -15,6 +15,7 @@
 
     if (pg_num_rows($email_check) > 0) {
         echo "Error: El correo '$e_mail' ya esta registrado. Use un correo diferente.";
+        exit();
     }
     
     // FEATURE 2: Validar unicidad del celular
@@ -35,7 +36,7 @@
     //Query to insert into SQL
     $sql = "INSERT INTO users (firstname, lastname, email, mobile_phone, psswd, url_photo)
                
-               values('$f_name', '$l_name', '$e_mail','$m_phone','$enc_pass','profile_photos\user_default_2.png')";  //values('Pablo', 'Tomson', 'tom@mail.com','300777000','123')";
+               values('$f_name', '$l_name', '$e_mail','$m_phone','$enc_pass','profile_photos/user_default_2.png')";  //values('Pablo', 'Tomson', 'tom@mail.com','300777000','123')";
                
 
     //Execute query
