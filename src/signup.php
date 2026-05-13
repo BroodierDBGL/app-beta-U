@@ -24,9 +24,13 @@
         echo "Error: El celular '$m_phone' ya esta registrado. Use un numero diferente.";
         exit();
     }
+
     // FEATURE 3: Registro atomico en Local y Supabase
     pg_query($local_conn, "BEGIN");
     pg_query($supa_conn,  "BEGIN");
+
+    // FEATURE 4: Hasheo seguro con bcrypt en lugar de MD5
+    $enc_pass = password_hash($p_sswd, PASSWORD_BCRYPT);
 
     //Query to insert into SQL
     $sql = "INSERT INTO users (firstname, lastname, email, mobile_phone, psswd, url_photo)
