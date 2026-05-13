@@ -24,6 +24,9 @@
         echo "Error: El celular '$m_phone' ya esta registrado. Use un numero diferente.";
         exit();
     }
+    // FEATURE 3: Registro atomico en Local y Supabase
+    pg_query($local_conn, "BEGIN");
+    pg_query($supa_conn,  "BEGIN");
 
     //Query to insert into SQL
     $sql = "INSERT INTO users (firstname, lastname, email, mobile_phone, psswd, url_photo)
@@ -32,6 +35,7 @@
                
 
     //Execute query
+    /*
     $result = pg_query($local_conn, $sql);
 
     if(!$result){
@@ -40,6 +44,22 @@
         //echo "Registrado Exitosamente!";
         echo "<script>alert('Listo. Usuario registrado')</script>";
         header('refresh:0;url=signin.html');
+    }*/
+
+    $local_result = pg_query($local_conn, $sql);
+    $supa_result  = pg_query($supa_conn,  $sql);
+
+    if ($local_result && $supa_result) {
+        pg_query($local_conn, "COMMIT");
+        pg_query($supa_conn,  "COMMIT");
+        //echo "Registrado Exitosamente en ambas bases de datos!";
+        echo "<script>alert('Listo. Usuario registrado')</script>";
+        header('refresh:0;url=signin.html');
+
+    } else {
+        pg_query($local_conn, "ROLLBACK");
+        pg_query($supa_conn,  "ROLLBACK");
+        echo "Error: El registro fallo. Se deshicieron los cambios en ambas bases de datos.";
     }
 
     //Para comprobar se usa postman
